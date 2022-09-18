@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+.header {
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	background: #1F2937;
+	color: #F9FAF8;
+}
+
+.header div {
+	margin: 0em 6em;
+	flex: 1 1 auto;
+}
+
+.nav-menu {
+	display: flex;
+	gap: 2.1em;
+	justify-content: right;
+	list-style-type: none;
+	color: #CCCFD4;
+}
+
+.hero {
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: 100%;
+	background: #1F2937;
+	color: #F9FAF8;
+}
+
+.info {
+	padding: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.info img{
+	padding: 1em;
+	max-height: 100px;
+	max-width: 100%;
+}
