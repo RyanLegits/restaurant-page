@@ -7,8 +7,11 @@ function createBackground() {
 	// Create background container
 	const backgroundCont = document.createElement('div');
 	backgroundCont.classList.add('background-cont');
+	// Add background to background container
+	backgroundCont.style.backgroundImage = 'url(../imgFood.jpg)';
+	// Keep aspect ratio without image overflow
+	backgroundCont.style.backgroundSize = 'cover';
 	content.appendChild(backgroundCont);
-
 }
 
 function createHeader() {
@@ -50,7 +53,6 @@ function createHeader() {
     	const navItem = document.createElement('li');
     	navItem.appendChild(document.createTextNode(item));
     	navMenu.appendChild(navItem);
-
     }
 }
 
@@ -69,12 +71,12 @@ function createHero() {
 
     // Create hero title
     const heroTitle = document.createElement('h1');
-    heroTitle.appendChild(document.createTextNode('Ramen Restaurant'));
+    heroTitle.appendChild(document.createTextNode('World Restaurant'));
     heroTextCont.appendChild(heroTitle);
 
     // Create hero sub title
     const heroSub = document.createElement('h6');
-    heroSub.appendChild(document.createTextNode('Text'));
+    heroSub.appendChild(document.createTextNode("'Cause when you're here, you're a friend!"));
     heroTextCont.appendChild(heroSub);
 }
 
