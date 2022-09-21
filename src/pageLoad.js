@@ -46,7 +46,7 @@ function createHeader() {
     // Create nav menu items
     
     // To add a menu item to page, add it to the list here
-    const menuItems = ['one', 'two', 'three'];
+    const menuItems = ['Home', 'Menu', 'Contact'];
 
     for (let i = 0; i < menuItems.length; i++) {
     	const item = menuItems[i];
@@ -98,7 +98,7 @@ function createInfo() {
     const infoImageCont = document.createElement('div');
     infoImageCont.classList.add('info-image-cont');
     info.appendChild(infoImageCont);
-    /// Add info image
+    // Add info image
     const infoImage = document.createElement('img');
     infoImage.classList.add('info-image');
     infoImage.setAttribute('src', '../infoImage.jpg');
