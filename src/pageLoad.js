@@ -81,11 +81,35 @@ function createHero() {
 }
 
 function createInfo() {
-	
+	const content = document.querySelector('#content');
+
+	// Create info
+	const info = document.createElement('div');
+	info.classList.add('info');
+
+	// Create info text container
+	const infoTextCont = document.createElement('div');
+    infoTextCont.classList.add('info-text-cont');
+    info.appendChild(infoTextCont);
+    // Add info paragraphs with breaks
+    infoTextCont.appendChild(document.createTextNode('Nulla suscipit est ut lorem vestibulum semper. In at suscipit eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer lacinia massa vitae tellus malesuada, et tristique libero egestas. Fusce dictum ac eros at posuere. Nam pretium quam maximus tincidunt porttitor. Sed a massa nec tortor elementum lobortis sit amet quis lorem. Cras mi dui, gravida et massa vel, imperdiet semper odio.\n\nNullam sodales ante sed purus finibus, non vulputate massa scelerisque. Suspendisse posuere leo nibh, sit amet consequat sapien interdum in. Proin pellentesque, velit at tincidunt luctus, ligula massa rhoncus nunc, vitae egestas purus justo sed elit. Mauris ante eros, rutrum sed sodales quis, posuere eu justo. Nulla vitae posuere nisi. Nullam id metus iaculis, sodales leo auctor, rutrum ipsum. Maecenas scelerisque nec dui egestas lacinia. Duis hendrerit, urna non pulvinar convallis, mi sapien mattis lacus, at tincidunt ligula urna in sapien. Quisque sit amet ipsum ac arcu egestas luctus non sed turpis.'));
+
+    // Create info image containter
+    const infoImageCont = document.createElement('div');
+    infoImageCont.classList.add('info-image-cont');
+    info.appendChild(infoImageCont);
+    /// Add info image
+    const infoImage = document.createElement('img');
+    infoImage.classList.add('info-image');
+    infoImage.setAttribute('src', '../infoImage.jpg');
+    infoImageCont.appendChild(infoImage);
+
+    content.appendChild(info);
 }
 
 export default function pageLoad() {
 	createBackground();
 	createHeader();
 	createHero();
+	createInfo();
 }
