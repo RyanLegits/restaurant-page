@@ -1,9 +1,13 @@
 // Append html elements to DOM (including: header, hero and info)
+const content = document.querySelector('#content');
+
+const homeCont = document.createElement('div');
+homeCont.setAttribute('id', 'home');
+homeCont.classList.add('flex-item', 'active');
+content.appendChild(homeCont);
 
 // Create background to span header and hero
 function createBackground() {
-	const content = document.querySelector('#content');
-
 	// Create background container
 	const backgroundCont = document.createElement('div');
 	backgroundCont.classList.add('background-cont');
@@ -11,49 +15,7 @@ function createBackground() {
 	backgroundCont.style.backgroundImage = 'url(../imgFood.jpg)';
 	// Keep aspect ratio without image overflow
 	backgroundCont.style.backgroundSize = 'cover';
-	content.appendChild(backgroundCont);
-}
-
-function createHeader() {
-	const backgroundCont = document.querySelector('.background-cont');
-
-	// Create header
-	const header = document.createElement('div');
-	header.classList.add('header');
-	backgroundCont.appendChild(header);
-
-	// Create header logo container
-    const headerLogoCont = document.createElement('div');
-    headerLogoCont.classList.add('header-logo-cont');
-    header.appendChild(headerLogoCont);
-
-    // Create header logo
-    const headerLogo = document.createElement('h3');
-    headerLogo.classList.add('header-logo');
-    headerLogo.innerHTML = "Header Logo";
-    headerLogoCont.appendChild(headerLogo);
-
-    // Create header navigation container
-    const headerNavCont = document.createElement('div');
-    headerNavCont.classList.add('header-nav-cont');
-    header.appendChild(headerNavCont);
-
-    // Create nav menu
-    const navMenu = document.createElement('ul');
-    navMenu.classList.add('nav-menu');
-    headerNavCont.appendChild(navMenu);
-
-    // Create nav menu items
-    
-    // To add a menu item to page, add it to the list here
-    const menuItems = ['Home', 'Menu', 'Contact'];
-
-    for (let i = 0; i < menuItems.length; i++) {
-    	const item = menuItems[i];
-    	const navItem = document.createElement('li');
-    	navItem.appendChild(document.createTextNode(item));
-    	navMenu.appendChild(navItem);
-    }
+	homeCont.appendChild(backgroundCont);
 }
 
 function createHero() {
@@ -81,8 +43,6 @@ function createHero() {
 }
 
 function createInfo() {
-	const content = document.querySelector('#content');
-
 	// Create info
 	const info = document.createElement('div');
 	info.classList.add('info');
@@ -104,12 +64,11 @@ function createInfo() {
     infoImage.setAttribute('src', '../infoImage.jpg');
     infoImageCont.appendChild(infoImage);
 
-    content.appendChild(info);
+    homeCont.appendChild(info);
 }
 
-export default function pageLoad() {
+export default function loadHome() {
 	createBackground();
-	createHeader();
 	createHero();
 	createInfo();
 }
