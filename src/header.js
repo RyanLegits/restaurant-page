@@ -1,4 +1,4 @@
-import { toggleContent } from "./index";
+import { togglePageContent } from "./index";
 
 function createHeader() {
 	const content = document.querySelector('#content');
@@ -16,7 +16,7 @@ function createHeader() {
     // Create header logo
     const headerLogo = document.createElement('h3');
     headerLogo.classList.add('header-logo');
-    headerLogo.innerHTML = "Logo";
+    headerLogo.innerHTML = 'Logo';
     headerLogoCont.appendChild(headerLogo);
 
     // Create header navigation container
@@ -38,7 +38,7 @@ function createHeader() {
     	const item = menuItems[i];
     	const navItem = document.createElement('li');
     	navItem.setAttribute('data-tab', item.toLowerCase());
-    	navItem.addEventListener('click', toggleContent);
+    	navItem.addEventListener('click', togglePageContent);
     	navMenu.appendChild(navItem);
 
     	const navLink = document.createElement('a');

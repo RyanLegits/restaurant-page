@@ -17,6 +17,7 @@ h6 {
 
 body {
 	background-color: #e8e0d7;
+	font-family: 'Lora', serif;
 }
 
 a {
@@ -28,10 +29,6 @@ a:hover, a:active {
   color: #e69138;
 }
 
-.sub-content {
-	padding-top: 4em;
-}
-
 .header {
 	height: 2em;
 	min-width: 100%;
@@ -41,11 +38,18 @@ a:hover, a:active {
 	top: 0;
 	align-items: center;
 	color: #F9FAF8;
+	background-color: #1b170e;
 }
 
 .header div {
 	margin: 0em 6em;
 	flex: 1 1 auto;
+}
+
+.menu-title-cont, .contact-title-cont {
+	display: flex;
+	padding-top: 5em;
+	justify-content: center;
 }
 
 .nav-menu {
@@ -63,11 +67,11 @@ a:hover, a:active {
 	height: 37em;
 	max-width: 100%;
 	color: #F9FAF8;
-	text-align: center;
 }
 
 .hero-text-cont {
-	padding-top: 5em;
+	padding-top: 8em;
+	text-align: center;
 }
 
 .hero-text-cont h6 {
@@ -99,4 +103,16 @@ a:hover, a:active {
 
 .flex-item.active {
 	display: block;
+}
+
+.footer {
+	height: 2em;
+	min-width: 100%;
+	padding: 1em;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #F9FAF8;
+	background-color: #352B16;
 }

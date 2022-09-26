@@ -2,14 +2,15 @@ import loadHeader from './header';
 import loadHome from './pageLoad';
 import loadMenu from './menu';
 import loadContact from './contact';
+import loadFooter from './footer'
 
 // Handle tabbed browsing
 const tabs = document.querySelectorAll('[data-tab]');
-const content = document.getElementsByClassName('active');
+const pageContent = document.getElementsByClassName('active');
 
-export function toggleContent() {
+export function togglePageContent() {
 	if (!this.classList.contains("active")) {
-		Array.from(content).forEach( item => {
+		Array.from(pageContent).forEach( item => {
 			item.classList.remove('active');
 		});
 
@@ -22,10 +23,11 @@ export function toggleContent() {
 }
 
 Array.from(tabs).forEach( item => {
-	item.addEventListener('click', toggleContent);
+	item.addEventListener('click', togglePageContent);
 });
 
 loadHeader();
 loadHome();
 loadMenu();
 loadContact();
+loadFooter();
