@@ -16,7 +16,7 @@ function createHeader() {
     // Create header logo
     const headerLogo = document.createElement('h3');
     headerLogo.classList.add('header-logo');
-    headerLogo.innerHTML = 'Logo';
+    headerLogo.innerHTML = 'WR';
     headerLogoCont.appendChild(headerLogo);
 
     // Create header navigation container

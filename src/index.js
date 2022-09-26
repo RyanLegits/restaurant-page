@@ -1,5 +1,5 @@
 import loadHeader from './header';
-import loadHome from './pageLoad';
+import loadHome from './home';
 import loadMenu from './menu';
 import loadContact from './contact';
 import loadFooter from './footer'
