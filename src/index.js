@@ -2,28 +2,28 @@ import loadHeader from './header';
 import loadHome from './home';
 import loadMenu from './menu';
 import loadContact from './contact';
-import loadFooter from './footer'
+import loadFooter from './footer';
 
 // Handle tabbed browsing
 const tabs = document.querySelectorAll('[data-tab]');
 const pageContent = document.getElementsByClassName('active');
 
-export function togglePageContent() {
-	if (!this.classList.contains("active")) {
-		Array.from(pageContent).forEach( item => {
-			item.classList.remove('active');
-		});
+export default function togglePageContent() {
+  if (!this.classList.contains('active')) {
+    Array.from(pageContent).forEach((item) => {
+      item.classList.remove('active');
+    });
 
-		this.classList.add('active');
+    this.classList.add('active');
 
-		let currentTab = this.getAttribute('data-tab'),
-		tabContent = document.getElementById(currentTab);
-		tabContent.classList.add('active');
-	}
+    const currentTab = this.getAttribute('data-tab');
+    const tabContent = document.getElementById(currentTab);
+    tabContent.classList.add('active');
+  }
 }
 
-Array.from(tabs).forEach( item => {
-	item.addEventListener('click', togglePageContent);
+Array.from(tabs).forEach((item) => {
+  item.addEventListener('click', togglePageContent);
 });
 
 loadHeader();

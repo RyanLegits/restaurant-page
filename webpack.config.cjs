@@ -7,18 +7,18 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
-
     rules: [
-
       {
-
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
+      {
         test: /\.css$/i,
 
         use: ['style-loader', 'css-loader'],
-
       },
-
     ],
-
   },
 };

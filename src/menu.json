@@ -1,0 +1,31 @@
+{
+	"Menu": [
+		{
+			"Salad": [
+				{"Luang Prabang Salad": "Laos salad with hard-boiled egg, watercress, peanuts and cilantro served on a bed of mixed greens and accompanied by a traditional Lao dressing"},
+				{"Christmas Salad": "An Icelandic favorite with redd cabbage, red currant jelly, apricot preserves and fresh lemon juice"}
+			]
+		},
+
+		{
+			"Appetizer": [
+				{"Solterito": "Peruvian chopped salad with corn, edamame, red onions, cherry tomatoes, feta, jalapeño, olives, salt, pepper, and cilantro"},
+				{"Tarteletter": "From Denmark, puff pastry tartlets filled with chicken and asparagus sauce"}
+			]
+		},
+
+		{
+			"Entrée": [
+				{"Liboke": "Congolese boiled fish with tomato and chile, wrapped in banana leaves and grilled with a house blend of spices"},
+				{"Oil Down": "The national dish of Granada consisting of vegetables, starchy tubers, green bananas, chicken and pigtails"}
+			]
+		},
+
+		{
+			"Dessert": [
+				{"Breskvice": "Croatian peach shaped Christmas cookies with chocolate filling"},
+				{"Kue Mangkok": "Traditional steamed cupcakes from Brunei flavored with tapai (fermented cassava)"}
+			]
+		}
+	]
+}
