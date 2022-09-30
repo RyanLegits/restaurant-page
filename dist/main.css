@@ -54,7 +54,7 @@ a:hover, a:active {
 	color: #191919;
 }
 
-.menu-title-cont, .contact-title-cont {
+.title-cont {
 	display: flex;
 	padding-top: 5em;
 	justify-content: center;
@@ -65,20 +65,20 @@ a:hover, a:active {
 	text-align: center;
 }
 
-.menu-sec-cont {
+.menu-sec-cont, .contact-sec-cont{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.menu-sec {
+.menu-sec, .contact-sec {
 	margin: 2em;
 	padding: 1em;
 	background-color: white;
 	text-align: center;
 	min-width: 50em;
 	max-width: 50em;
-	color: #B99501;
+	color: #3f3100;
 }
 
 .sec-item {

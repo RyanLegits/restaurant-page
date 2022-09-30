@@ -8,7 +8,7 @@ function createContact() {
 
   // Create contact
   const contactTitleCont = document.createElement('div');
-  contactTitleCont.classList.add('contact-title-cont');
+  contactTitleCont.classList.add('title-cont');
   contact.appendChild(contactTitleCont);
 
   const contactTitle = document.createElement('h1');
