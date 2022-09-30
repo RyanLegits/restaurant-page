@@ -63,6 +63,8 @@ a:hover, a:active {
 .menu-info {
 	padding-top: 1em;
 	text-align: center;
+	/* Allow '\n' to work in text node */
+	white-space: pre;
 }
 
 .menu-sec-cont, .contact-sec-cont{

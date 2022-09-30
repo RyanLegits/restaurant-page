@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable guard-for-in */
 import menuJSON from './menu.json';
-import { elementFactory } from './pageFactories';
+import { elFactory } from './pageFactories';
 
 // Function to build menu items in sections
 function buildMenu() {
@@ -51,27 +51,28 @@ function buildMenu() {
 function createMenu() {
   const content = document.querySelector('#content');
 
-  const menu = document.createElement('div');
-  menu.setAttribute('id', 'menu');
-  menu.classList.add('flex-item');
+  // Create main container for Menu page
+  const menu = elFactory('div', { id: 'menu', class: 'flex-item' });
   content.appendChild(menu);
 
-  const menuTitleCont = document.createElement('div');
-  menuTitleCont.classList.add('title-cont');
-  menu.appendChild(menuTitleCont);
+  // Create menu title inside a container
+  const menuTitle = elFactory(
+    'div',
+    { class: 'title-cont' },
+    elFactory('h1', {}, 'Menu')
+  );
+  menu.appendChild(menuTitle);
 
-  const menuTitle = document.createElement('h1');
-  menuTitle.innerHTML = 'Menu';
-  menuTitleCont.appendChild(menuTitle);
-
-  const menuInfo = document.createElement('h6');
-  menuInfo.classList.add('menu-info');
-  menuInfo.innerHTML =
-    'Our menu changes weekly and features fresh, locally-sourced ingredients.<br/><br/>Here are our current selections:';
+  // Create subtitle on menu page
+  const menuInfo = elFactory(
+    'h6',
+    { class: 'menu-info' },
+    'Our menu changes weekly and features fresh, locally-sourced ingredients.\n\nHere are our current selections:'
+  );
   menu.appendChild(menuInfo);
 
-  const menuSecCont = document.createElement('div');
-  menuSecCont.classList.add('menu-sec-cont');
+  // Create container for menu course containers; used for formatting
+  const menuSecCont = elFactory('div', { class: 'menu-sec-cont' });
   menu.appendChild(menuSecCont);
 
   // Create all menu items in sections

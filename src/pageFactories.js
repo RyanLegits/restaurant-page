@@ -4,7 +4,7 @@
 // Page building factories
 
 // DOM element factory
-export const elementFactory = (type, attributes, ...children) => {
+export const elFactory = (type, attributes, ...children) => {
   const element = document.createElement(type);
 
   for (const key in attributes) {
@@ -20,3 +20,13 @@ export const elementFactory = (type, attributes, ...children) => {
   });
   return element;
 };
+
+// Use template
+// const elName = elFactory(
+//   'div',
+//   { class: 'my-component' },
+//   elFactory('span', {}, 'Hello World!'),
+//   ' String as textNode '
+// )
+
+// document.body.appendChild(elName)
