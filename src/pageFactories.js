@@ -26,7 +26,7 @@ export const elFactory = (type, attributes, ...children) => {
 //   'div',
 //   { class: 'my-component' },
 //   elFactory('span', {}, 'Hello World!'),
-//   ' String as textNode '
+//   'String as textNode'
 // )
 
 // document.body.appendChild(elName)

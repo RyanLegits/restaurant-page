@@ -50,6 +50,11 @@ a:hover, a:active {
 	flex: 1 1 auto;
 }
 
+.background-cont {
+	background-image: url('../imgFood.jpg');
+	background-size: cover;
+}
+
 #menu, #contact {
 	color: #191919;
 }

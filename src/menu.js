@@ -8,9 +8,9 @@ function buildMenu() {
   // Create menu item section
   function createMenuSec(menuItems) {
     const menuSecCont = document.querySelector('.menu-sec-cont');
-    const menuSec = document.createElement('div');
-    menuSec.classList.add('menu-sec');
-    menuSec.setAttribute('id', menuItems);
+
+    // Create menu section
+    const menuSec = elFactory('div', { id: menuItems, class: 'menu-sec' });
     menuSecCont.appendChild(menuSec);
   }
 
@@ -18,12 +18,14 @@ function buildMenu() {
     createMenuSec(`menu-sec-${i}`);
     const secHeaderName = Object.keys(menuJSON.Menu[i]);
     const x = secHeaderName.toString();
-
-    const secHeader = document.createElement('h3');
-    secHeader.classList.add('sec-header');
-    secHeader.setAttribute('id', `sec-header-${i}`);
-    secHeader.innerHTML = secHeaderName;
     const temp = document.getElementById(`menu-sec-${i}`);
+
+    // Create section header
+    const secHeader = elFactory(
+      'h3',
+      { id: `sec-header-${i}`, class: 'sec-header' },
+      `${secHeaderName}`
+    );
     temp.appendChild(secHeader);
 
     for (const j in menuJSON.Menu[i][x]) {
@@ -33,16 +35,20 @@ function buildMenu() {
       const secItemDesc = Object.values(menuJSON.Menu[i][x][j]);
       const z = secItemDesc.toString();
 
-      const secItem = document.createElement('div');
-      secItem.classList.add('sec-item');
-      secItem.setAttribute('id', `menu-sec-item-${j}`);
-      secItem.appendChild(document.createTextNode(y));
+      // Create section item
+      const secItem = elFactory(
+        'div',
+        { id: `menu-sec-item-${j}`, class: 'sec-item' },
+        `${y}`
+      );
       temp.appendChild(secItem);
 
-      const itemDesc = document.createElement('div');
-      itemDesc.classList.add('item-desc');
-      itemDesc.setAttribute('id', `item-desc-${j}`);
-      itemDesc.appendChild(document.createTextNode(z));
+      // Create item description
+      const itemDesc = elFactory(
+        'div',
+        { id: `item-desc-${j}`, class: 'item-desc' },
+        `${z}`
+      );
       temp.appendChild(itemDesc);
     }
   }
@@ -51,7 +57,7 @@ function buildMenu() {
 function createMenu() {
   const content = document.querySelector('#content');
 
-  // Create main container for Menu page
+  // Create Menu page
   const menu = elFactory('div', { id: 'menu', class: 'flex-item' });
   content.appendChild(menu);
 

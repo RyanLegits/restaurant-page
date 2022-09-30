@@ -1,33 +1,27 @@
 /* eslint-disable import/no-cycle */
+import { elFactory } from './pageFactories';
 import togglePageContent from './index';
 
 function createHeader() {
   const content = document.querySelector('#content');
 
   // Create header
-  const header = document.createElement('div');
-  header.classList.add('header');
+  const header = elFactory('div', { class: 'header' });
   content.appendChild(header);
 
-  // Create header logo container
-  const headerLogoCont = document.createElement('div');
-  headerLogoCont.classList.add('header-logo-cont');
+  // Create header logo inside a container
+  const headerLogoCont = elFactory(
+    'div',
+    { class: 'header-logo-cont' },
+    elFactory('h3', { class: 'header-logo' }, 'WR')
+  );
   header.appendChild(headerLogoCont);
 
-  // Create header logo
-  const headerLogo = document.createElement('h3');
-  headerLogo.classList.add('header-logo');
-  headerLogo.innerHTML = 'WR';
-  headerLogoCont.appendChild(headerLogo);
-
-  // Create header navigation container
-  const headerNavCont = document.createElement('div');
-  headerNavCont.classList.add('header-nav-cont');
+  // Create header nav container
+  const headerNavCont = elFactory('div', { class: 'header-nav-cont' });
   header.appendChild(headerNavCont);
 
-  // Create nav menu
-  const navMenu = document.createElement('ul');
-  navMenu.classList.add('nav-menu');
+  const navMenu = elFactory('ul', { class: 'nav-menu' });
   headerNavCont.appendChild(navMenu);
 
   // Create nav menu items
@@ -42,9 +36,7 @@ function createHeader() {
     navItem.addEventListener('click', togglePageContent);
     navMenu.appendChild(navItem);
 
-    const navLink = document.createElement('a');
-    navLink.setAttribute('href', '#');
-    navLink.appendChild(document.createTextNode(item));
+    const navLink = elFactory('a', { href: '#' }, `${item}`);
     navItem.appendChild(navLink);
   }
 }

@@ -1,19 +1,19 @@
+import { elFactory } from './pageFactories';
+
 function createContact() {
   const content = document.querySelector('#content');
 
-  const contact = document.createElement('div');
-  contact.setAttribute('id', 'contact');
-  contact.classList.add('flex-item');
+  // Create Contact page
+  const contact = elFactory('div', { id: 'contact', class: 'flex-item' });
   content.appendChild(contact);
 
-  // Create contact
-  const contactTitleCont = document.createElement('div');
-  contactTitleCont.classList.add('title-cont');
+  // Create contact title container with title
+  const contactTitleCont = elFactory(
+    'div',
+    { class: 'title-cont' },
+    elFactory('h1', {}, 'Contact')
+  );
   contact.appendChild(contactTitleCont);
-
-  const contactTitle = document.createElement('h1');
-  contactTitle.innerHTML = 'Contact';
-  contactTitleCont.appendChild(contactTitle);
 }
 
 export default function loadContact() {

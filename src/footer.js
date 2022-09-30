@@ -1,10 +1,14 @@
+import { elFactory } from './pageFactories';
+
 function createFooter() {
   const content = document.querySelector('#content');
 
   // Create footer
-  const footer = document.createElement('div');
-  footer.classList.add('footer');
-  footer.innerHTML = '&copy; Copyright 2022 World Restaurant';
+  const footer = elFactory(
+    'div',
+    { class: 'footer' },
+    '\u00A9 Copyright 2022 World Restaurant'
+  );
   content.appendChild(footer);
 }
 
