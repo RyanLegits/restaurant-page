@@ -1,163 +1,196 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h1 {
-	font-size: 4rem;
+  font-size: 4rem;
 }
 
 h3 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 h6 {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 body {
-	background-color: #e8e0d7;
-	font-family: 'Lora', serif;
+  background-color: #e8e0d7;
+  font-family: 'Lora', serif;
 }
 
 a {
-  color: #ECE6DF;
+  color: #ece6df;
   text-decoration: none;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   color: #e69138;
 }
 
 .header {
-	height: 2em;
-	min-width: 100%;
-	padding: 1em;
-	display: flex;
-	position: fixed;
-	top: 0;
-	align-items: center;
-	color: #F9FAF8;
-	background-color: #1b170e;
+  height: 2em;
+  min-width: 100%;
+  padding: 1em;
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  color: #f9faf8;
+  background-color: #1b170e;
 }
 
 .header div {
-	margin: 0em 6em;
-	flex: 1 1 auto;
+  margin: 0em 6em;
+  flex: 1 1 auto;
 }
 
 .background-cont {
-	background-image: url('../imgFood.jpg');
-	background-size: cover;
+  background-image: url('../imgFood.jpg');
+  background-size: cover;
 }
 
-#menu, #contact {
-	color: #191919;
+#menu,
+#contact {
+  color: #191919;
 }
 
 .title-cont {
-	display: flex;
-	padding-top: 5em;
-	justify-content: center;
+  display: flex;
+  padding-top: 5em;
+  justify-content: center;
+}
+
+.contact-cont {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.contact-sec-cont {
+  background-color: white;
+  padding: 3em;
+  min-width: 20em;
+}
+
+.contact-sec-cont h6 {
+  padding: 0.5em;
+}
+
+.contact-sec-cont p {
+  padding: 0.5em;
+}
+
+.sec-hours {
+  display: flex;
+  flex-direction: column;
+}
+
+.hours {
+  display: flex;
 }
 
 .menu-info {
-	padding-top: 1em;
-	text-align: center;
-	/* Allow '\n' to work in text node */
-	white-space: pre;
+  padding-top: 1em;
+  text-align: center;
+  /* Allow '\n' to work in text node */
+  white-space: pre;
 }
 
-.menu-sec-cont, .contact-sec-cont{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.menu-sec-cont,
+.contact-sec-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.menu-sec, .contact-sec {
-	margin: 2em;
-	padding: 1em;
-	background-color: white;
-	text-align: center;
-	min-width: 50em;
-	max-width: 50em;
-	color: #3f3100;
+.menu-sec,
+.contact-sec {
+  margin: 2em;
+  padding: 1em;
+  background-color: white;
+  text-align: center;
+  min-width: 50em;
+  max-width: 50em;
+  color: #3f3100;
 }
 
 .sec-item {
-	padding: 2em 1em 0em 1em;
-	text-decoration: underline;
+  padding: 2em 1em 0em 1em;
+  text-decoration: underline;
 }
 
 .item-desc {
-	padding: 1em;
+  padding: 1em;
 }
 
 .nav-menu {
-	display: flex;
-	gap: 2.1em;
-	justify-content: right;
-	list-style-type: none;
-	color: #CCCFD4;
+  display: flex;
+  gap: 2.1em;
+  justify-content: right;
+  list-style-type: none;
+  color: #cccfd4;
 }
 
 .hero {
-	padding: 1em;
-	display: flex;
-	justify-content: center;
-	height: 37em;
-	max-width: 100%;
-	color: #F9FAF8;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  height: 37em;
+  max-width: 100%;
+  color: #f9faf8;
 }
 
 .hero-text-cont {
-	padding-top: 8em;
-	text-align: center;
+  padding-top: 8em;
+  text-align: center;
 }
 
 .hero-text-cont h6 {
-	padding-top: 1em;
+  padding-top: 1em;
 }
 
 .info {
-	padding: 2em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	white-space: pre-wrap;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  white-space: pre-wrap;
 }
 
 .info-text-cont {
-	padding: 2em;
+  padding: 2em;
 }
 
 .info-image {
-	padding: 1em;
-	max-height: 200px;
-	max-width: 100%;
+  padding: 1em;
+  max-height: 200px;
+  max-width: 100%;
 }
 
 .flex-item {
-	display: none;
+  display: none;
 }
 
 .flex-item.active {
-	display: block;
+  display: block;
 }
 
 .footer {
-	height: 2em;
-	min-width: 100%;
-	padding: 1em;
-	bottom: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #F9FAF8;
-	background-color: #352B16;
+  height: 2em;
+  min-width: 100%;
+  padding: 1em;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9faf8;
+  background-color: #352b16;
 }
