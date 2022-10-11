@@ -53,7 +53,10 @@ function createHome() {
     const infoImageCont = elFactory(
       'div',
       { class: 'info-image-cont' },
-      elFactory('img', { class: 'info-image', src: '../infoImage.jpg' })
+      elFactory('img', {
+        class: 'info-image',
+        src: '../src/images/infoImage.jpg',
+      })
     );
     info.appendChild(infoImageCont);
   }
