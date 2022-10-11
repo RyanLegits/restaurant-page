@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  performance: {
+    hints: false,
+  },
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -19,6 +22,7 @@ module.exports = {
 
         use: ['style-loader', 'css-loader'],
       },
+      { test: /\.png/, type: 'asset/resource' },
     ],
   },
 };

@@ -51,7 +51,6 @@ a:active {
 }
 
 .background-cont {
-  background-image: url('../dist/assets/images/imgFood.jpg');
   background-size: cover;
 }
 

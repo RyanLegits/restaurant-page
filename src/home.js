@@ -1,3 +1,6 @@
+import imgInfo from './assets/images/imgInfo.png';
+import imgFood from './assets/images/imgFood.png';
+
 import { elFactory } from './pageFactories';
 
 function createHome() {
@@ -13,6 +16,7 @@ function createHome() {
   function createBackground() {
     // Create background container
     const backgroundCont = elFactory('div', { class: 'background-cont' });
+    backgroundCont.style.backgroundImage = `url(${imgFood})`;
     homeCont.appendChild(backgroundCont);
   }
 
@@ -55,7 +59,7 @@ function createHome() {
       { class: 'info-image-cont' },
       elFactory('img', {
         class: 'info-image',
-        src: '../dist/assets/images/infoImage.jpg',
+        src: `${imgInfo}`,
       })
     );
     info.appendChild(infoImageCont);
