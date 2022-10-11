@@ -9,7 +9,7 @@
     },
     o: (e, t) => Object.prototype.hasOwnProperty.call(e, t),
   };
-  e.d({}, { Z: () => c });
+  e.d({}, { Z: () => s });
   const t = (e, t, ...n) => {
       const a = document.createElement(e);
       for (const e in t) a.setAttribute(e, t[e]);
@@ -27,7 +27,7 @@
     );
   const a = document.querySelectorAll('[data-tab]'),
     o = document.getElementsByClassName('active');
-  function c() {
+  function s() {
     if (!this.classList.contains('active')) {
       Array.from(o).forEach((e) => {
         e.classList.remove('active');
@@ -38,7 +38,7 @@
     }
   }
   Array.from(a).forEach((e) => {
-    e.addEventListener('click', c);
+    e.addEventListener('click', s);
   }),
     (function () {
       const e = document.querySelector('#content'),
@@ -52,15 +52,15 @@
       n.appendChild(a);
       const o = t('div', { class: 'header-nav-cont' });
       n.appendChild(o);
-      const s = t('ul', { class: 'nav-menu' });
-      o.appendChild(s);
+      const c = t('ul', { class: 'nav-menu' });
+      o.appendChild(c);
       const i = ['Home', 'Menu', 'Contact'];
       for (let e = 0; e < i.length; e += 1) {
         const n = i[e],
           a = document.createElement('li');
         a.setAttribute('data-tab', n.toLowerCase()),
-          a.addEventListener('click', c),
-          s.appendChild(a);
+          a.addEventListener('click', s),
+          c.appendChild(a);
         const o = t('a', { href: '#' }, `${n}`);
         a.appendChild(o);
       }
@@ -95,13 +95,16 @@
           const a = t(
             'div',
             { class: 'info-text-cont' },
-            't World Restaurant we strive to bring together the most delectable cuisine from every corner of the world! Our head chef Gordon Alléno has studied cuisine on every continent, working with renowned chefs in France, Peru, South Africa, the United States, and Thailand. Alléno brings all his knowledge together to create both traditional recipes and fusion creations. Here at World Restaurant, we truly believe that every culture is beautiful (and tasty)!\n\nEnjoy the ambiance with cultural architecture from around the world, as well as contemporary art contrasting ancient relics that will make your meal an experience. Our waiters are knowledgeable in the history of every cultural piece or symbol in our restaurant. Experience a tour of the World while enjoying the cuisine that it has created.\n\nWelcome to World Restaurant!'
+            'At World Restaurant we strive to bring together the most delectable cuisine from every corner of the world! Our head chef Gordon Alléno has studied cuisine on every continent, working with renowned chefs in France, Peru, South Africa, the United States, and Thailand. Alléno brings all his knowledge together to create both traditional recipes and fusion creations. Here at World Restaurant, we truly believe that every culture is beautiful (and tasty)!\n\nEnjoy the ambiance with cultural architecture from around the world, as well as contemporary art contrasting ancient relics that will make your meal an experience. Our waiters are knowledgeable in the history of every cultural piece or symbol in our restaurant. Experience a tour of the World while enjoying the cuisine that it has created.\n\nWelcome to World Restaurant!'
           );
           e.appendChild(a);
           const o = t(
             'div',
             { class: 'info-image-cont' },
-            t('img', { class: 'info-image', src: '../infoImage.jpg' })
+            t('img', {
+              class: 'info-image',
+              src: '../dist/assets/images/infoImage.jpg',
+            })
           );
           e.appendChild(o);
         })();
@@ -112,14 +115,14 @@
       e.appendChild(a);
       const o = t('div', { class: 'title-cont' }, t('h1', {}, 'Menu'));
       a.appendChild(o);
-      const c = t(
+      const s = t(
         'h6',
         { class: 'menu-info' },
         'Our menu changes weekly and features fresh, locally-sourced ingredients.\n\nHere are our current selections:'
       );
-      a.appendChild(c);
-      const s = t('div', { class: 'menu-sec-cont' });
-      a.appendChild(s),
+      a.appendChild(s);
+      const c = t('div', { class: 'menu-sec-cont' });
+      a.appendChild(c),
         (function () {
           function e(e) {
             const n = document.querySelector('.menu-sec-cont'),
@@ -129,29 +132,29 @@
           for (const a in n.v) {
             e(`menu-sec-${a}`);
             const o = Object.keys(n.v[a]),
-              c = o.toString(),
-              s = document.getElementById(`menu-sec-${a}`),
+              s = o.toString(),
+              c = document.getElementById(`menu-sec-${a}`),
               i = t(
                 'h3',
                 { id: `sec-header-${a}`, class: 'sec-header' },
                 `${o}`
               );
-            s.appendChild(i);
-            for (const e in n.v[a][c]) {
-              const o = Object.keys(n.v[a][c][e]).toString(),
-                i = Object.values(n.v[a][c][e]).toString(),
+            c.appendChild(i);
+            for (const e in n.v[a][s]) {
+              const o = Object.keys(n.v[a][s][e]).toString(),
+                i = Object.values(n.v[a][s][e]).toString(),
                 r = t(
                   'div',
                   { id: `menu-sec-item-${e}`, class: 'sec-item' },
                   `${o}`
                 );
-              s.appendChild(r);
+              c.appendChild(r);
               const d = t(
                 'div',
                 { id: `item-desc-${e}`, class: 'item-desc' },
                 `${i}`
               );
-              s.appendChild(d);
+              c.appendChild(d);
             }
           }
         })();
@@ -164,7 +167,7 @@
       n.appendChild(a);
       const o = t('div', { class: 'contact-cont' });
       n.appendChild(o);
-      const c = t(
+      const s = t(
         'div',
         { class: 'contact-sec-cont' },
         t('h6', {}, 'Call Us'),
@@ -191,7 +194,7 @@
           )
         )
       );
-      o.appendChild(c);
+      o.appendChild(s);
     })(),
     (function () {
       const e = document.querySelector('#content'),

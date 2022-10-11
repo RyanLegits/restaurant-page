@@ -55,7 +55,7 @@ function createHome() {
       { class: 'info-image-cont' },
       elFactory('img', {
         class: 'info-image',
-        src: '../src/images/infoImage.jpg',
+        src: '../dist/assets/images/infoImage.jpg',
       })
     );
     info.appendChild(infoImageCont);
