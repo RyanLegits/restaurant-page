@@ -36,14 +36,13 @@ a:active {
 
 .header {
   height: 2em;
-  min-width: 100%;
   padding: 1em;
   display: flex;
-  position: fixed;
   top: 0;
   align-items: center;
   color: #f9faf8;
   background-color: #1b170e;
+  position: relative;
 }
 
 .header div {
@@ -185,7 +184,6 @@ a:active {
 
 .footer {
   height: 2em;
-  min-width: 100%;
   padding: 1em;
   bottom: 0;
   display: flex;
@@ -193,4 +191,5 @@ a:active {
   justify-content: center;
   color: #f9faf8;
   background-color: #352b16;
+  position: relative;
 }
